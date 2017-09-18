@@ -10,6 +10,22 @@ defmodule Raindrops do
   """
   @spec convert(pos_integer) :: String.t
   def convert(number) do
-
+    result = 
+      [3, 5, 7]
+      |> Enum.filter(&(rem(number, &1) == 0))
+      |> Enum.map(fn x ->
+        cond do
+          x == 3 -> "Pling"
+          x == 5 -> "Plang"
+          x == 7 -> "Plong"
+          true -> ""
+        end
+      end)
+      |> Enum.join
+    if result == "" do
+      to_string(number)
+    else
+      result
+    end
   end
 end
