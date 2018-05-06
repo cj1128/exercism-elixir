@@ -1,7 +1,11 @@
-# Elixir Exercism
+<div align="center">
+  <h1>
+    <a href="http://exercism.io/languages/elixir/about">
+      Exercism Elixir
+    </a>
+  </h1>
 
-Practice [Elixir](https://elixir-lang.org/) in [Exercism](http://exercism.io/) is really Fun, elixir makes me happy😙
-
-<p align="center">
-  <img src="https://elixir-lang.org/images/logo/logo.png" />
-</p>
+  <a href="https://elixir-lang.org/">
+    <img src="https://elixir-lang.org/images/logo/logo.png" />
+  </a>
+</div>
