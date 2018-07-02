@@ -45,29 +45,29 @@ defmodule ProteinTranslation do
   UGA -> STOP
   """
   @codon_protein_mapping %{
-    UGU: :Cysteine,
-    UGC: :Cysteine,
-    UUA: :Leucine,
-    UUG: :Leucine,
-    AUG: :Methionine,
-    UUU: :Phenylalanine,
-    UUC: :Phenylalanine,
-    UCU: :Serine,
-    UCC: :Serine,
-    UCA: :Serine,
-    UCG: :Serine,
-    UGG: :Tryptophan,
-    UAU: :Tyrosine,
-    UAC: :Tyrosine,
-    UAA: :STOP,
-    UAG: :STOP,
-    UGA: :STOP,
+    "UGU" => "Cysteine",
+    "UGC" => "Cysteine",
+    "UUA" => "Leucine",
+    "UUG" => "Leucine",
+    "AUG" => "Methionine",
+    "UUU" => "Phenylalanine",
+    "UUC" => "Phenylalanine",
+    "UCU" => "Serine",
+    "UCC" => "Serine",
+    "UCA" => "Serine",
+    "UCG" => "Serine",
+    "UGG" => "Tryptophan",
+    "UAU" => "Tyrosine",
+    "UAC" => "Tyrosine",
+    "UAA" => "STOP",
+    "UAG" => "STOP",
+    "UGA" => "STOP",
   }
   @spec of_codon(String.t()) :: { atom, String.t() }
   def of_codon(codon) do
-    result = Map.get(@codon_protein_mapping, String.to_atom(codon))
+    result = Map.get(@codon_protein_mapping, codon)
     if result do
-      {:ok, to_string(result)}
+      {:ok, result}
     else
       {:error, "invalid codon"}
     end

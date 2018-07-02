@@ -9,7 +9,7 @@ defmodule BracketPush do
   """
   @spec check_brackets(String.t) :: boolean
   def check_brackets(str) do
-    stack = 
+    stack =
       str
       |> String.graphemes
       |> to_stack([])
@@ -35,7 +35,7 @@ defmodule BracketPush do
           to_stack(tail, [x | stack])
         end
       true ->
-        to_stack(tail, stack) 
+        to_stack(tail, stack)
     end
   end
 end

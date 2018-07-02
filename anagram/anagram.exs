@@ -16,6 +16,6 @@ defmodule Anagram do
     get_sorted_charlist(source_downcase) == get_sorted_charlist(target_downcase)
   end
 
-  defp get_sorted_charlist(str), 
+  defp get_sorted_charlist(str),
     do: str |> String.to_charlist |> Enum.sort
 end

@@ -3,7 +3,7 @@ defmodule RNATranscription do
     ?G => ?C,
     ?C => ?G,
     ?T => ?A,
-    ?A => ?U, 
+    ?A => ?U,
   }
   @doc """
   Transcribes a character list representing DNA nucleotides to RNA
